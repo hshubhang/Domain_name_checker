@@ -76,13 +76,13 @@ This project uses models hosted on **Hugging Face** for reproducibility:
 ### Automatic Download
 ```bash
 # Download all models (~515MB total)
-python download_models.py
+python Model/download_models.py
 
 # Check what will be downloaded
-python download_models.py --info
+python Model/download_models.py --info
 
 # Force re-download
-python download_models.py --force
+python Model/download_models.py --force
 ```
 
 ### Manual Download (Alternative)
@@ -123,7 +123,7 @@ pip install -r requirements.txt
 ### Environment Setup
 ```bash
 # Create conda environment
-conda create -n domain python=3.9
+conda create -n domain python=3.13
 conda activate domain
 
 # Install CUDA support (if using GPU)
