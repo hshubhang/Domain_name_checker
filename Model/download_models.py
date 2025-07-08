@@ -65,7 +65,7 @@ class ModelDownloader:
         
         # Check classifier
         classifier_path = self.models_config["classifier"]["local_path"]
-        model_file = classifier_path / "pytorch_model.bin"
+        model_file = classifier_path / "model.safetensors"
         config_file = classifier_path / "config.json"
         tokenizer_file = classifier_path / "tokenizer.json"
         
@@ -118,8 +118,7 @@ class ModelDownloader:
                     "adapter_config.json", 
                     "tokenizer.json",
                     "tokenizer_config.json",
-                    "special_tokens_map.json",
-                    "chat_template.jinja"
+                    "special_tokens_map.json"
                 ]
                 
                 for file_name in essential_files:
@@ -149,7 +148,7 @@ class ModelDownloader:
         
         # Check if already exists
         if not force and config["local_path"].exists():
-            model_file = config["local_path"] / "pytorch_model.bin"
+            model_file = config["local_path"] / "model.safetensors"
             if model_file.exists():
                 print(f"   ✅ Classifier already exists, skipping...")
                 return
