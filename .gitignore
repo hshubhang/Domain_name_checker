@@ -94,3 +94,49 @@ docs/_build/
 *.bak
 *.backup
 *~ 
+
+# ================================
+# ML PROJECT SPECIFIC ADDITIONS
+# ================================
+
+# Large Model Files & Weights
+lora_adapters/
+Model/classifier_model_v3/
+*.safetensors
+*.pt
+*.pth
+*.bin
+*.onnx
+
+# Large Dataset Files
+data/tokenized_*/
+data/processed_*/
+data/*.parquet
+data/*.arrow
+
+# Hugging Face Cache
+.cache/
+transformers_cache/
+huggingface/
+
+# Training Artifacts
+wandb/
+runs/
+lightning_logs/
+tensorboard_logs/
+mlruns/
+
+# Model Analysis Reports (optional - comment out if you want to commit these)
+model_comparison_report.json
+model_performance_metrics.csv
+model_comparison_summary.md
+
+# BFG Backup (temporary git cleanup files)
+*.bfg-report
+refs/original/
+
+# Large Archive Files
+*.tar.gz
+*.zip
+*.7z
+Domain_name_checker_backup.tar.gz 
