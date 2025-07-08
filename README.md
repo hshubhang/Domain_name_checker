@@ -41,7 +41,7 @@ Uses profanity-profanity library + custom keyword detection as fallback.
 ### 🚀 **Setup (First Time)**
 ```bash
 # 1. Clone the repository
-git clone https://github.com/yourusername/Domain_name_checker
+git clone https://github.com/hshubhang/Domain_name_checker
 cd Domain_name_checker
 
 # 2. Create conda environment  
@@ -52,7 +52,7 @@ conda activate domain
 pip install -r requirements.txt
 
 # 4. Download models (one-time setup)
-python download_models.py
+python Model/download_models.py
 ```
 # 5. Open ai api key needed for evaluator and Replicate api key needed for model_v0 run
 
