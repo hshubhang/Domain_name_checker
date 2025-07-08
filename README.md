@@ -40,31 +40,29 @@ Uses profanity-profanity library + custom keyword detection as fallback.
 
 ### 🚀 **Setup (First Time)**
 ```bash
-# 1. Clone the repository
+# Clone the repository
 git clone https://github.com/hshubhang/Domain_name_checker
 cd Domain_name_checker
 
-# 2. Create conda environment  
-conda create -n domain python=3.9
+# Create conda environment  
+conda create -n domain python=3.13
 conda activate domain
 
-# 3. Install dependencies
+
+# Install CUDA support (if using GPU)
+conda install pytorch pytorch-cuda=11.8 -c pytorch -c nvidia
+
+# Install remaining dependencies
 pip install -r requirements.txt
 
-# 4. Download models (one-time setup)
+
+# Download models (one-time setup)
 python Model/download_models.py
+
+
 ```
 # 5. Open ai api key needed for evaluator and Replicate api key needed for model_v0 run
 
-### **Ready to Use**
-```bash
-# Start API server
-python api_endpoint.py
-
-# Or test directly
-cd Model/
-python model_v4.py
-```
 
 ## Model Download
 
@@ -120,17 +118,7 @@ pip install -r requirements.txt
 - **better-profanity>=0.7.0** - NSFW content filtering
 - **scikit-learn>=1.0.0** - Classification utilities
 
-### Environment Setup
-```bash
-# Create conda environment
-conda create -n domain python=3.13
-conda activate domain
 
-# Install CUDA support (if using GPU)
-conda install pytorch pytorch-cuda=11.8 -c pytorch -c nvidia
-
-# Install remaining dependencies
-pip install -r requirements.txt
 ```
 
 ### Development/Testing Environment
