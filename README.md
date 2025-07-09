@@ -109,9 +109,9 @@ pip install -r requirements.txt
 
 ### Key Packages
 - **torch>=2.0.0** - PyTorch for model inference
-- **transformers>=4.30.0** - Hugging Face model loading
-- **peft>=0.4.0** - LoRA adapter support
-- **bitsandbytes>=0.39.0** - 8-bit quantization
+- **transformers>=4.40.0** - Hugging Face model loading
+- **peft>=0.8.0** - LoRA adapter support
+- **bitsandbytes>=0.40.0** - 8-bit quantization
 - **huggingface_hub>=0.17.0** - Model download support
 - **openai>=1.0.0** - GPT evaluation API
 - **flask>=2.3.0** - REST API server
