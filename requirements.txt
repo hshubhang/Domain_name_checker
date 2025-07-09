@@ -10,7 +10,7 @@ seaborn>=0.12.0
 # GPU-Enabled PyTorch and ML Libraries
 # ================================
 # Install PyTorch with CUDA support first:
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
 # Then install the rest of the requirements
 
 # Transformers and model libraries
