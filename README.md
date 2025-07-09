@@ -133,8 +133,6 @@ pip install -r requirements.txt
 
 ## Project Structure
 
-<pre>
-<code>
 ```
 Domain_name_checker/
 ├── api_endpoint.py                 # REST API server
@@ -159,8 +157,6 @@ Domain_name_checker/
 ├── Model Outputs/                  # Inference results from models
 └── evaluator outputs/              # Evaluation results and logs
 ```
-</code>
-</pre>
 
 ## Usage
 
