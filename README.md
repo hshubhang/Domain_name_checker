@@ -158,6 +158,7 @@ Domain_name_checker/
 └── evaluator outputs/              # Evaluation results and logs
 
 
+```
 ## Usage
 
 ### 🚀 **API Server**
@@ -175,6 +176,7 @@ curl "http://localhost:5000/generate?business_description=organic%20coffee%20sho
 curl -X POST http://localhost:5000/generate \
   -H "Content-Type: application/json" \
   -d '{"business_description": "organic coffee shop"}'
+
 ```
 
 
