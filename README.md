@@ -133,7 +133,7 @@ pip install -r requirements.txt
 
 ## Project Structure
 
-```
+
 Domain_name_checker/
 ├── api_endpoint.py                 # REST API server
 ├── download_models.py              # Model download script (run once)
@@ -156,7 +156,7 @@ Domain_name_checker/
 │   └── v4/                         # Latest model adapters
 ├── Model Outputs/                  # Inference results from models
 └── evaluator outputs/              # Evaluation results and logs
-```
+
 
 ## Usage
 
