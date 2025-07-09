@@ -167,22 +167,17 @@ python api_endpoint.py
 
 # Test endpoints
 curl http://localhost:5000/health
-curl "http://localhost:5000/generate?business_description=organic coffee shop"
+
+# GET request (spaces must be URL encoded)
+curl "http://localhost:5000/generate?business_description=organic%20coffee%20shop"
+
+# POST request (recommended)
+curl -X POST http://localhost:5000/generate \
+  -H "Content-Type: application/json" \
+  -d '{"business_description": "organic coffee shop"}'
 ```
 
-### 📊 **Model Evaluation**
-```bash
-# Run evaluation on all models
-cd Evaluator/
-python Evaluator_final.py
-```
 
-### 🤖 **Batch Processing**
-```bash
-# Generate domains for dataset
-cd Model/
-python model_v4.py
-```
 
 ## API Endpoints
 
@@ -213,6 +208,20 @@ python model_v4.py
   "status": "blocked",
   "message": "Request contains inappropriate content"
 }
+```
+
+### 📊 **Model Evaluation**
+```bash
+# Run evaluation on all models
+cd Evaluator/
+python Evaluator_final.py
+```
+
+### 🤖 **Batch Processing**
+```bash
+# Generate domains for dataset
+cd Model/
+python model_v4.py
 ```
 
 ## Model Performance

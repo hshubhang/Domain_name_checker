@@ -1,3 +1,18 @@
+# ================================
+# IMPORTANT: Installation Instructions
+# ================================
+# 1. Create a clean conda environment with Python 3.13:
+#    conda create -n domain_clean python=3.13
+#    conda activate domain_clean
+#
+# 2. Install PyTorch with CUDA support FIRST (before other requirements):
+#    pip install torch torchvision
+
+#First install torch and torchvision and then only install bitsandbytes!!!
+
+# ================================
+# Core Dependencies
+# ================================
 python-dotenv>=1.0.0
 pandas>=2.0.0
 matplotlib>=3.7.0
@@ -7,15 +22,13 @@ matplotlib>=3.7.0
 seaborn>=0.12.0
 
 # ================================
-# GPU-Enabled PyTorch and ML Libraries
+# ML Libraries (install AFTER PyTorch)
 # ================================
-# Install PyTorch with CUDA support first:
-# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
-# Then install the rest of the requirements
+# PyTorch should be installed separately first - see instructions aboce
 
 # Transformers and model libraries
-transformers>=4.35.0
-peft>=0.6.0
+transformers>=4.40.0
+peft>=0.8.0
 datasets>=2.14.0
 huggingface_hub>=0.17.0
 numpy>=1.24.0
