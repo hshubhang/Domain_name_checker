@@ -133,30 +133,34 @@ pip install -r requirements.txt
 
 ## Project Structure
 
+<pre>
+<code>
 ```
 Domain_name_checker/
-├── download_models.py             # Model download script (run once)
-├── api_endpoint.py               # REST API server
-├── Evaluator_final.py            # Evaluation script
-├── requirements.txt              # Dependencies
-├── README.md                     # This file
-├── Model/                        # Model implementations
-│   ├── model_v4.py              # Latest model (gibberish + NSFW filtering)
-    |-- model_v3.py              # Model with DISTILBERT based gibberish filtering
-│   ├── model_v2.py              # Gibberish filtering hardcoded 
-│   ├── model_v1.py              # No filtering (baseline)
-│   ├── classifier_model_v3/     # Downloaded gibberish classifier
-│   └── train_lora_pretokenized.py # Training script (not needed for inference)
-├── Evaluator/                    # Legacy evaluation system
-├── data/                         # Training and test datasets
-│   └── dataset_injection_v4.jsonl # Evaluation dataset (100 entries)
-├── lora_adapters/                # Downloaded LoRA weights
-│   ├── v1/                      # Basic model adapters
-│   ├── v2/                      # Improved model adapters  
-│   └── v4/                      # Latest model adapters
-├── Model Outputs/                # Generated domain results
-└── evaluator outputs/            # Evaluation reports
+├── api_endpoint.py                 # REST API server
+├── download_models.py              # Model download script (run once)
+├── Evaluator_final.py              # Evaluation script
+├── requirements.txt                # Dependencies
+├── README.md                       # Project documentation
+├── Model/                          # Model implementations
+│   ├── model_v1.py                 # No filtering (baseline)
+│   ├── model_v2.py                 # Gibberish filtering (hardcoded)
+│   ├── model_v3.py                 # DISTILBERT-based gibberish filtering
+│   ├── model_v4.py                 # Gibberish + NSFW filtering (latest)
+│   ├── classifier_model_v3/        # Downloaded gibberish classifier
+│   └── train_lora_pretokenized.py  # Training script (optional)
+├── Evaluator/                      # Legacy evaluation system
+├── data/                           # Training and test datasets
+│   └── dataset_injection_v4.jsonl  # Evaluation dataset (100 entries)
+├── lora_adapters/                  # LoRA adapter checkpoints
+│   ├── v1/                         # Basic model adapters
+│   ├── v2/                         # Improved model adapters  
+│   └── v4/                         # Latest model adapters
+├── Model Outputs/                  # Inference results from models
+└── evaluator outputs/              # Evaluation results and logs
 ```
+</code>
+</pre>
 
 ## Usage
 
